@@ -1,0 +1,19 @@
+common:
+  data:
+    lumimask : https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/ReReco/Cert_314472-325175_13TeV_17SeptEarlyReReco2018ABC_PromptEraD_Collisions18_JSON.txt
+    splitting: 20
+    globaltag: 102X_dataRun2_v11
+  mc:
+    splitting: 20
+    globaltag: 102X_upgrade2018_realistic_v15
+
+samples:
+  data_TTbar_PU0:    
+    dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+    split: 1
+  data_TTbar_PU140:
+     dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  data_TTbar_PU200:
+     dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1

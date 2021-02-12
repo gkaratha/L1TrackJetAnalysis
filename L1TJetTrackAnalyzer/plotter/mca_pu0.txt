@@ -1,0 +1,1 @@
+/eos/cms/store/cmst3/user/gkaratha/L1Tracker_2021Jan16/TT_TuneCP5_14TeV-powheg-pythia8/crab_data_TTbar_PU0/210115_231010/0000/L1Jets_2021Jan16_20.root
