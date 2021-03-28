@@ -17,11 +17,12 @@ config.section_('Data')
 config.Data.publication = False
 config.Data.outLFNDirBase = '/store/group/cmst3/user/gkaratha/%s' % (config.General.workArea)
 config.Data.inputDBS = 'global'
+config.Data.totalUnits= 1000
 
 config.section_('JobType')
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = '../test/run_L1emulation_cfg.py'
-#config.JobType.maxJobRuntimeMin = 4000
+config.JobType.maxMemoryMB = 4000
 config.JobType.allowUndistributedCMSSW = True
 
 config.section_('User')
@@ -47,8 +48,9 @@ if __name__ == '__main__':
   parser = ArgumentParser()
   parser.add_argument('-y', '--yaml', default = 'samples.yml', help = 'File with dataset descriptions')
   parser.add_argument('-f', '--filter', default='*', help = 'filter samples, POSIX regular expressions allowed')
-  parser.add_argument('-d', '--displacedJets', default='False', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('-d', '--addDisplaced', default='False', help = 'filter samples, POSIX regular expressions allowed')
   parser.add_argument('-p', '--addPrompt', default='False', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('--wantFullReco', default='False', help = 'filter samples, POSIX regular expressions allowed')
   args = parser.parse_args()
 
   with open(args.yaml) as f:
@@ -74,8 +76,9 @@ if __name__ == '__main__':
       config.JobType.pyCfgParams = [
             'reportEvery=1000',
             'tag=%s' % production_tag,
-            'displacedJets=%s' % args.displacedJets,
-            'addPrompt=%s' % args.addPrompt
+            'addDisplaced=%s' % args.addDisplaced,
+            'addPrompt=%s' % args.addPrompt,
+            'wantFullReco=%s' % args.wantFullReco
         ]
         
       config.JobType.outputFiles = ['_'.join(['L1Jets', production_tag])+'.root']

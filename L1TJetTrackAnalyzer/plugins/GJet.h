@@ -9,12 +9,13 @@
 #include "FWCore/Framework/interface/MakerMacros.h"
 #include "DataFormats/JetReco/interface/GenJet.h"
 #include "DataFormats/Math/interface/deltaR.h"
+#include "DataFormats/HepMCCandidate/interface/GenParticle.h"
 
 
 
 class GJet{
   public:
-   GJet(const edm::EDGetTokenT<std::vector<reco::GenJet>> &,const edm::Event &);
+   GJet(const edm::EDGetTokenT<std::vector<reco::GenJet>> &, const edm::EDGetTokenT<std::vector<reco::GenParticle>> &, const edm::Event &);
    ~GJet();
 
   void FillBranches(NtupleContent &nt);
@@ -22,6 +23,7 @@ class GJet{
 
   private:
    edm::Handle<std::vector<reco::GenJet>> gJets;
+   edm::Handle<std::vector<reco::GenParticle>> gParts;
 };
 
 #endif

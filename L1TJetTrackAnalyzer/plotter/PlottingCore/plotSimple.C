@@ -11,7 +11,7 @@
 
 
 
-int plotSimple( TString path, TString name, std::string mca, std::string plots, TString tree){
+int plotSimple( TString path, TString name, TString mca, TString plots, TString tree){
   
 
   TChain * ccdata=new TChain(tree);

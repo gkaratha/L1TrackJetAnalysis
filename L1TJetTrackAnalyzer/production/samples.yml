@@ -8,12 +8,30 @@ common:
     globaltag: 102X_upgrade2018_realistic_v15
 
 samples:
-  data_TTbar_PU0:    
+  TTbar_PU0:    
     dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
     split: 1
-  data_TTbar_PU140:
+  TTbar_PU140:
      dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
-  data_TTbar_PU200:
+  TTbar_PU200:
      dataset: /TT_TuneCP5_14TeV-powheg-pythia8/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
+  MinimumBias:
+     dataset: /MinBias_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v3/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH_ctau10:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH_ctau0:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH_ctau50:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH_ctau100:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+
+
+

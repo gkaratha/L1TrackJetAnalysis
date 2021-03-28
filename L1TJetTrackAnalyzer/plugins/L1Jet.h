@@ -16,7 +16,7 @@ class L1Jet{
     L1Jet(const edm::EDGetTokenT<std::vector<l1t::TkJet>> & JetToken_, const edm::Event &iEvent);
     ~L1Jet();
     void ReadData(const edm::EDGetTokenT<std::vector<l1t::TkJet>> & JetToken_, const edm::Event &iEvent);
-    void FillBranches(std::string Col, NtupleContent &nt);
+    void FillBranches(std::string Col, std::string ColTrk, NtupleContent &nt);
     void AddMCBranches(std::string Col, NtupleContent &nt);
   
   private:

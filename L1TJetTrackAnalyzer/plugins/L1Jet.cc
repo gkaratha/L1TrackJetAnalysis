@@ -15,30 +15,30 @@ L1Jet::ReadData(const edm::EDGetTokenT<std::vector<l1t::TkJet>> & JetToken_, con
 }
 
 void
-L1Jet::FillBranches (std::string Col, NtupleContent &nt){
+L1Jet::FillBranches (std::string Col, std::string ColTrk, NtupleContent &nt){
    unsigned int njets=0;
    for(const auto &jet: *Jets){
-     //std::cout<<"in jet "<<jet.pt()<<std::endl;
-     //nt.trackjet_pt.emplace_back(jet.pt());
+     
      (nt.GetBranch(Col+"_pt"))->emplace_back(jet.pt());
      (nt.GetBranch(Col+"_eta"))->emplace_back(jet.eta());
      (nt.GetBranch(Col+"_phi"))->emplace_back(jet.phi());
      (nt.GetBranch(Col+"_nDispTracks"))->emplace_back(jet.nDisptracks());
      (nt.GetBranch(Col+"_nTightDispTracks"))->emplace_back(jet.nTightDisptracks());
-     (nt.GetBranch(Col+"_nTracks"))->emplace_back(jet.ntracks());
      (nt.GetBranch(Col+"_nTightTracks"))->emplace_back(jet.nTighttracks());
      (nt.GetBranch(Col+"_nL1Trk"))->emplace_back(jet.trkPtrs().size());
-      
-     //std::cout<<"hg "<<jet.trkPtrs().size()<<std::endl;
-     std::vector<float> vtrk_eta,vtrk_phi,vtrk_pt;
+     
+     std::vector<int> vtrk_idx;
      for(auto &trkPtr: jet.trkPtrs() ){
-        vtrk_eta.emplace_back(trkPtr->eta()); 
-        vtrk_phi.emplace_back(trkPtr->phi());
-        vtrk_pt.emplace_back(1./(trkPtr->rInv()));
+        int idx=-99;
+        for(unsigned int itrk=0; itrk<nt.GetBranch(ColTrk+"_pt")->size(); itrk++){
+          if ( fabs(trkPtr->eta()-nt.GetBranch(ColTrk+"_eta")->at(itrk))>0.00001 || fabs(trkPtr->phi()-nt.GetBranch(ColTrk+"_phi")->at(itrk))>0.00001 )
+              continue;
+          idx=itrk;
+          break; 
+        }
+        vtrk_idx.emplace_back(idx); 
      }
-     (nt.Get2DBranch(Col+"_L1Trk_eta"))->emplace_back(vtrk_eta);
-     (nt.Get2DBranch(Col+"_L1Trk_phi"))->emplace_back(vtrk_phi);
-     (nt.Get2DBranch(Col+"_L1Trk_pt"))->emplace_back(vtrk_pt);
+     (nt.Get2DBranch(Col+"_L1Trk_idx"))->emplace_back(vtrk_idx);
      njets+=1;
    }
    *(nt.SetNCol("n"+Col))=njets;

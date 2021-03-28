@@ -136,7 +136,7 @@ if __name__ == "__main__":
 
     parser.add_option("-n","--ncore",dest="ncore",type="int",  default=-1, help="number of cores to use. -1 uses all")
 
-    parser.add_option("--tree",dest="tree",  default="Events", type="string", help="tree name. Default Events")
+    parser.add_option("--tree",dest="tree",  default="L1TrackNtuple/Events", type="string", help="tree name. Default Events")
    
     (options, args) = parser.parse_args()
 
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 
 
     print "applying cosmetics... "
-    #gInterpreter.ProcessLine(cppcode)
+   
     gROOT.SetBatch(True)
     froot = TFile(workdir+'/hsum.root')
     yld = open(options.outputDir+"/Yields.txt","w")
@@ -288,6 +288,7 @@ if __name__ == "__main__":
         c1.SaveAs(options.outputDir+"/"+canvasName+".png");
         c1.SaveAs(options.outputDir+"/"+canvasName+".pdf");
     yld.close()
+    
     os.system( "mv "+workdir+"/hsum.root   "+options.outputDir+"/histos.root" )
     os.system( "rm -r "+workdir )
     print "finished !"

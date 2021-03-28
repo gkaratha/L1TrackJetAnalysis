@@ -3,59 +3,70 @@
 
 
 NtupleContent::NtupleContent(){
-  variable_map["TrackJet_pt"]=&TrackJet_pt; 
-  variable_map["TrackJet_eta"]=&TrackJet_eta;
-  variable_map["TrackJet_phi"]=&TrackJet_phi;
-  variable_map["TrackJet_nDispTracks"]=&TrackJet_nDispTracks;
-  variable_map["TrackJet_nTightDispTracks"]=&TrackJet_nTightDispTracks;
-  variable_map["TrackJet_nTracks"]=&TrackJet_nTracks;
-  variable_map["TrackJet_nTightTracks"]=&TrackJet_nTightTracks;
-  variable_map["TrackJet_matchedToGenIdx"]=&TrackJet_matchedToGenIdx;
-  variable_map["TrackJet_nL1Trk"]=&TrackJet_nL1Trk;
-  variable_2d_map["TrackJet_L1Trk_pt"]=&TrackJet_L1Trk_pt; 
-  variable_2d_map["TrackJet_L1Trk_eta"]=&TrackJet_L1Trk_eta;
-  variable_2d_map["TrackJet_L1Trk_phi"]=&TrackJet_L1Trk_phi;
-  nCol_map["nTrackJet"]=&nTrackJet;
+  variable_map["TwoLayerJet_pt"]=&TwoLayerJet_pt; 
+  variable_map["TwoLayerJet_eta"]=&TwoLayerJet_eta;
+  variable_map["TwoLayerJet_phi"]=&TwoLayerJet_phi;
+  variable_map["TwoLayerJet_nDispTracks"]=&TwoLayerJet_nDispTracks;
+  variable_map["TwoLayerJet_nTightDispTracks"]=&TwoLayerJet_nTightDispTracks;
+  variable_map["TwoLayerJet_nTightTracks"]=&TwoLayerJet_nTightTracks;
+  variable_map["TwoLayerJet_matchedToGenIdx"]=&TwoLayerJet_matchedToGenIdx;
+  variable_map["TwoLayerJet_nL1Trk"]=&TwoLayerJet_nL1Trk;
+  variable_map["TwoLayerJet_matchedToTrackingJetIdx"]=&TwoLayerJet_matchedToTrackingJetIdx;
+  variable_2d_map["TwoLayerJet_L1Trk_idx"]=&TwoLayerJet_L1Trk_idx; 
+  nCol_map["nTwoLayerJet"]=&nTwoLayerJet;
   variable_map["FastJet_pt"]=&FastJet_pt;
   variable_map["FastJet_eta"]=&FastJet_eta;
   variable_map["FastJet_phi"]=&FastJet_phi;
   variable_map["FastJet_nDispTracks"]=&FastJet_nDispTracks;
   variable_map["FastJet_nTightDispTracks"]=&FastJet_nTightDispTracks;
-  variable_map["FastJet_nTracks"]=&FastJet_nTracks;
   variable_map["FastJet_nTightTracks"]=&FastJet_nTightTracks;
   variable_map["FastJet_matchedToGenIdx"]=&FastJet_matchedToGenIdx;
   variable_map["FastJet_nL1Trk"]=&FastJet_nL1Trk;
-  variable_2d_map["FastJet_L1Trk_pt"]=&FastJet_L1Trk_pt;
-  variable_2d_map["FastJet_L1Trk_eta"]=&FastJet_L1Trk_eta;
-  variable_2d_map["FastJet_L1Trk_phi"]=&FastJet_L1Trk_phi;
+  variable_2d_map["FastJet_L1Trk_idx"]=&FastJet_L1Trk_idx;
   nCol_map["nFastJet"]=&nFastJet;
-  variable_map["TrackJetExt_pt"]=&TrackJetExt_pt;
-  variable_map["TrackJetExt_eta"]=&TrackJetExt_eta;
-  variable_map["TrackJetExt_phi"]=&TrackJetExt_phi;
-  variable_map["TrackJetExt_nDispTracks"]=&TrackJetExt_nDispTracks;
-  variable_map["TrackJetExt_nTightDispTracks"]=&TrackJetExt_nTightDispTracks;
-  variable_map["TrackJetExt_nTracks"]=&TrackJetExt_nTracks;
-  variable_map["TrackJetExt_nTightTracks"]=&TrackJetExt_nTightTracks;
-  variable_map["TrackJetExt_matchedToGenIdx"]=&TrackJetExt_matchedToGenIdx;
-  variable_map["TrackJetExt_nL1Trk"]=&TrackJetExt_nL1Trk;
-  variable_2d_map["TrackJetExt_L1Trk_pt"]=&TrackJetExt_L1Trk_pt;
-  variable_2d_map["TrackJetExt_L1Trk_eta"]=&TrackJetExt_L1Trk_eta;
-  variable_2d_map["TrackJetExt_L1Trk_phi"]=&TrackJetExt_L1Trk_phi;
-  nCol_map["nTrackJetExt"]=&nTrackJetExt;
+  variable_map["TwoLayerJetExt_pt"]=&TwoLayerJetExt_pt;
+  variable_map["TwoLayerJetExt_eta"]=&TwoLayerJetExt_eta;
+  variable_map["TwoLayerJetExt_phi"]=&TwoLayerJetExt_phi;
+  variable_map["TwoLayerJetExt_nDispTracks"]=&TwoLayerJetExt_nDispTracks;
+  variable_map["TwoLayerJetExt_nTightDispTracks"]=&TwoLayerJetExt_nTightDispTracks;
+  variable_map["TwoLayerJetExt_nTightTracks"]=&TwoLayerJetExt_nTightTracks;
+  variable_map["TwoLayerJetExt_matchedToGenIdx"]=&TwoLayerJetExt_matchedToGenIdx;
+  variable_map["TwoLayerJetExt_nL1Trk"]=&TwoLayerJetExt_nL1Trk;
+  variable_map["TwoLayerJetExt_matchedToTrackingJetExtIdx"]=&TwoLayerJetExt_matchedToTrackingJetExtIdx;
+  variable_2d_map["TwoLayerJetExt_L1Trk_idx"]=&TwoLayerJetExt_L1Trk_idx;
+  nCol_map["nTwoLayerJetExt"]=&nTwoLayerJetExt;
   variable_map["FastJetExt_pt"]=&FastJetExt_pt;
   variable_map["FastJetExt_eta"]=&FastJetExt_eta;
   variable_map["FastJetExt_phi"]=&FastJetExt_phi;
   variable_map["FastJetExt_nDispTracks"]=&FastJetExt_nDispTracks;
   variable_map["FastJetExt_nTightDispTracks"]=&FastJetExt_nTightDispTracks;
-  variable_map["FastJetExt_nTracks"]=&FastJetExt_nTracks;
   variable_map["FastJetExt_nTightTracks"]=&FastJetExt_nTightTracks;
   variable_map["FastJetExt_matchedToGenIdx"]=&FastJetExt_matchedToGenIdx;
   variable_map["FastJetExt_nL1Trk"]=&FastJetExt_nL1Trk;
-  variable_2d_map["FastJetExt_L1Trk_pt"]=&FastJetExt_L1Trk_pt;
-  variable_2d_map["FastJetExt_L1Trk_eta"]=&FastJetExt_L1Trk_eta;
-  variable_2d_map["FastJetExt_L1Trk_phi"]=&FastJetExt_L1Trk_phi;
+  variable_2d_map["FastJetExt_L1Trk_idx"]=&FastJetExt_L1Trk_idx;
   nCol_map["nFastJetExt"]=&nFastJetExt;
-
+  variable_map["TrackingJetExt_pt"]=&TrackingJetExt_pt;
+  variable_map["TrackingJetExt_eta"]=&TrackingJetExt_eta;
+  variable_map["TrackingJetExt_phi"]=&TrackingJetExt_phi;
+  variable_map["TrackingJetExt_nDispTracks"]=&TrackingJetExt_nDispTracks;
+  variable_map["TrackingJetExt_nTightDispTracks"]=&TrackingJetExt_nTightDispTracks;
+  variable_map["TrackingJetExt_nTightTracks"]=&TrackingJetExt_nTightTracks;
+  variable_map["TrackingJetExt_matchedToGenIdx"]=&TrackingJetExt_matchedToGenIdx;
+  variable_map["TrackingJetExt_nL1Trk"]=&TrackingJetExt_nL1Trk;
+  variable_map["TrackingJetExt_matchedToTwoLayerJetExtIdx"]=&TrackingJetExt_matchedToTwoLayerJetExtIdx;
+  variable_2d_map["TrackingJetExt_L1Trk_idx"]=&TrackingJetExt_L1Trk_idx;
+  nCol_map["nTrackingJetExt"]=&nTrackingJetExt;
+  variable_map["TrackingJet_pt"]=&TrackingJet_pt;
+  variable_map["TrackingJet_eta"]=&TrackingJet_eta;
+  variable_map["TrackingJet_phi"]=&TrackingJet_phi;
+  variable_map["TrackingJet_nDispTracks"]=&TrackingJet_nDispTracks;
+  variable_map["TrackingJet_nTightDispTracks"]=&TrackingJet_nTightDispTracks;
+  variable_map["TrackingJet_nTightTracks"]=&TrackingJet_nTightTracks;
+  variable_map["TrackingJet_matchedToGenIdx"]=&TrackingJet_matchedToGenIdx;
+  variable_map["TrackingJet_nL1Trk"]=&TrackingJet_nL1Trk;
+  variable_map["TrackingJet_matchedToTwoLayerJetIdx"]=&TrackingJet_matchedToTwoLayerJetIdx;
+  variable_2d_map["TrackingJet_L1Trk_idx"]=&TrackingJet_L1Trk_idx;
+  nCol_map["nTrackingJet"]=&nTrackingJet;
   variable_map["GenJet_pt"]=&GenJet_pt;
   variable_map["GenJet_eta"]=&GenJet_eta;
   variable_map["GenJet_phi"]=&GenJet_phi;
@@ -65,7 +76,22 @@ NtupleContent::NtupleContent(){
   variable_map["GenJet_neutralEmE"]=&GenJet_neutralEmE;
   variable_map["GenJet_neutralHadronE"]=&GenJet_neutralHadronE;
   variable_map["GenJet_matchedToFastJetIdx"]=&GenJet_matchedToFastJetIdx;
-  variable_map["GenJet_matchedToTrackJetIdx"]=&GenJet_matchedToTrackJetIdx;
+  variable_map["GenJet_matchedToTwoLayerJetIdx"]=&GenJet_matchedToTwoLayerJetIdx;
+  variable_map["GenJet_matchedToFastJetExtIdx"]=&GenJet_matchedToFastJetExtIdx;
+  variable_map["GenJet_matchedToTwoLayerJetExtIdx"]=&GenJet_matchedToTwoLayerJetExtIdx;
+  variable_map["GenJet_matchedToTrackingJetIdx"]=&GenJet_matchedToTrackingJetIdx;
+  variable_map["GenJet_matchedToTrackingJetExtIdx"]=&GenJet_matchedToTrackingJetExtIdx;
+  variable_map["GenJet_part_pt"]=&GenJet_part_pt;
+  variable_map["GenJet_part_eta"]=&GenJet_part_eta;
+  variable_map["GenJet_part_phi"]=&GenJet_part_phi;
+  variable_map["GenJet_part_mass"]=&GenJet_part_mass;
+  variable_map["GenJet_part_pdgId"]=&GenJet_part_pdgId;
+  variable_map["GenJet_part_vx"]=&GenJet_part_vx;
+  variable_map["GenJet_part_vy"]=&GenJet_part_vy;
+  variable_map["GenJet_part_vz"]=&GenJet_part_vz;
+  variable_map["GenJet_part_dr"]=&GenJet_part_dr;
+  variable_map["GenJet_part_d0"]=&GenJet_part_d0;
+  variable_map["GenJet_part_momPdgId"]=&GenJet_part_momPdgId;
   nCol_map["nGenJet"]=&nGenJet;
   variable_map["Track_pt"]=&Track_pt;
   variable_map["Track_eta"]=&Track_eta;
@@ -128,7 +154,12 @@ NtupleContent::NtupleContent(){
   variable_scalar_map["MHT_et"]=&MHT_et;
   variable_scalar_map["MHT_phi"]=&MHT_phi;
   variable_scalar_map["MHT_etTotal"]=&MHT_etTotal;
-
+  variable_scalar_map["RunNumber"]=&RunNumber;
+  variable_scalar_map["EventNumber"]=&EventNumber;
+  variable_scalar_map["LumiSection"]=&LumiSection;
+  variable_scalar_map["Beamspot_x"]=&Beamspot_x;
+  variable_scalar_map["Beamspot_y"]=&Beamspot_y;
+  variable_scalar_map["Beamspot_z"]=&Beamspot_z;
  };
 
 NtupleContent::~NtupleContent(){};
@@ -165,20 +196,51 @@ NtupleContent::CreateBranches(){
 
 std::vector<float>*
 NtupleContent::GetBranch(std::string name){
+  bool exist=false;
+  for(auto var:variable_map)
+    if (name==var.first.c_str()){
+      exist=true;
+      break;
+    }
+  if (!exist) std::cout<<"problem in var "<<name<<std::endl;
+
   return variable_map[name];
 }
 
-std::vector<std::vector<float>>*
+std::vector<std::vector<int>>*
 NtupleContent::Get2DBranch(std::string name){
+  bool exist=false;
+  for(auto var:variable_2d_map) 
+    if (name==var.first.c_str()){
+      exist=true;
+      break;
+    }
+  if (!exist) std::cout<<"problem in var "<<name<<std::endl;
   return variable_2d_map[name];
 }
 
 float*
 NtupleContent::GetScalarBranch(std::string name){
+  bool exist=false;
+  for(auto var:variable_scalar_map)
+    if (name==var.first.c_str()){
+      exist=true;
+      break;
+    }
+  if (!exist) std::cout<<"problem in var "<<name<<std::endl;
+
   return variable_scalar_map[name];
 }
 
 unsigned int*
 NtupleContent::SetNCol(std::string name){
+  bool exist=false;
+  for(auto var:nCol_map)
+    if (name==var.first.c_str()){
+      exist=true;
+      break;
+    }
+  if (!exist) std::cout<<"problem in var "<<name<<std::endl;
+
   return nCol_map[name];
 }
