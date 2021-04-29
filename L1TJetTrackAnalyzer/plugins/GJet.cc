@@ -45,7 +45,14 @@ GJet::FillBranches(NtupleContent &nt){
     (nt.GenJet_matchedToTwoLayerJetExtIdx).emplace_back(-99.);
     (nt.GenJet_matchedToTrackingJetIdx).emplace_back(-99.);
     (nt.GenJet_matchedToTrackingJetExtIdx).emplace_back(-99.);
+    (nt.GenJet_matchedToFastJetDr).emplace_back(99.);
+    (nt.GenJet_matchedToTwoLayerJetDr).emplace_back(99.);
+    (nt.GenJet_matchedToFastJetExtDr).emplace_back(99.);
+    (nt.GenJet_matchedToTwoLayerJetExtDr).emplace_back(99.);
+    (nt.GenJet_matchedToTrackingJetDr).emplace_back(99.);
+    (nt.GenJet_matchedToTrackingJetExtDr).emplace_back(99.);
     
+
     if (jet_parton[ &gJet -&gJets->at(0)]!=null_value){
       reco::GenParticle genPart= gParts->at(jet_parton[ &gJet -&gJets->at(0)]);
       (nt.GenJet_part_pt).emplace_back(genPart.pt());
@@ -57,10 +64,19 @@ GJet::FillBranches(NtupleContent &nt){
       (nt.GenJet_part_vy).emplace_back(genPart.vy());
       (nt.GenJet_part_vz).emplace_back(genPart.vz());
       (nt.GenJet_part_d0).emplace_back(-genPart.vx()*sin(genPart.phi())+genPart.vy()*cos(genPart.phi()));
-      if (genPart.numberOfMothers()>0)
+      if (genPart.numberOfMothers()>0){
         (nt.GenJet_part_momPdgId).emplace_back(genPart.mother(0)->pdgId());
-      else
+        (nt.GenJet_part_momPt).emplace_back(genPart.mother(0)->pt());
+        (nt.GenJet_part_momVx).emplace_back(genPart.mother(0)->vx());
+        (nt.GenJet_part_momVy).emplace_back(genPart.mother(0)->vy());
+        (nt.GenJet_part_momVz).emplace_back(genPart.mother(0)->vz());
+      } else {
         (nt.GenJet_part_momPdgId).emplace_back(-99);
+        (nt.GenJet_part_momPt).emplace_back(-99);
+        (nt.GenJet_part_momVx).emplace_back(-99);
+        (nt.GenJet_part_momVy).emplace_back(-99);
+        (nt.GenJet_part_momVz).emplace_back(-99);
+      }
       (nt.GenJet_part_dr).emplace_back(jet_parton_mindr[ &gJet -&gJets->at(0)]);
       
     } else {
@@ -74,6 +90,11 @@ GJet::FillBranches(NtupleContent &nt){
       (nt.GenJet_part_vy).emplace_back(-99);
       (nt.GenJet_part_vz).emplace_back(-99);
       (nt.GenJet_part_momPdgId).emplace_back(-99);
+      (nt.GenJet_part_momPt).emplace_back(-99);
+      (nt.GenJet_part_momVx).emplace_back(-99);
+      (nt.GenJet_part_momVy).emplace_back(-99);
+      (nt.GenJet_part_momVz).emplace_back(-99);
+
      }
     //(nt.GenJet_part_status).emplace_back(minDR);
   }
@@ -92,5 +113,8 @@ GJet::MatchToReco(std::string Col, float boundDR, NtupleContent &nt){
      if (minDR2>boundDR*boundDR) continue;
      nt.GetBranch("GenJet_matchedTo"+Col+"Idx")->at(igen)=imatch;
      nt.GetBranch(Col+"_matchedToGenIdx")->at(imatch)=igen; 
+     nt.GetBranch("GenJet_matchedTo"+Col+"Dr")->at(igen)=sqrt(minDR2);
+     nt.GetBranch(Col+"_matchedToGenDr")->at(imatch)=sqrt(minDR2);
+
   }
 }

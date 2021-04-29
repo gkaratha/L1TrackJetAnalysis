@@ -1,6 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 L1TrackNtuple = cms.EDAnalyzer('L1TJetTrackAnalyzer',
+                                       BeamSpotInputTag=cms.InputTag("offlineBeamSpot"),
                                        TwoLayerJetsInputTag=cms.InputTag("L1TrackJets", "L1TrackJets", "L1TrackJets"),
                                        FastJetsInputTag = cms.InputTag("L1TrackFastJets","L1TrackFastJets"),
                                        TrackingJetsInputTag=cms.InputTag("L1FastTrackingJets","L1FastTrackingJets"),
@@ -18,6 +19,7 @@ L1TrackNtuple = cms.EDAnalyzer('L1TJetTrackAnalyzer',
                                        GenPartInputTag =cms.InputTag("genParticles"),
                                        L1GenJetMatchDR = cms.double(0.3),
                                        AddExtendedL1Jets= cms.bool(True),
-                                       AddExtendedL1Tracks = cms.bool(True)
+                                       AddExtendedL1Tracks = cms.bool(True),
+                                       SkipMCBranches = cms.bool(False) #leave empty mc branches -> makes code faster in case we run on min bias evts
 )
 

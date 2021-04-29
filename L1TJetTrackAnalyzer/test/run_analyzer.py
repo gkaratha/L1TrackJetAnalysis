@@ -25,23 +25,37 @@ readFiles=[
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_2.root",
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_3.root",
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_4.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_5.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_7.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_9.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau0/210225_140002/0000/l1t_EDM_2021Feb25_10.root"
+
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_1.root",
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_2.root",
 #"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_3.root",
-#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_4.root"
-#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_1.root",
-#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_3.root",
-#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_4.root",
-#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_5.root"
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_4.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_5.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_6.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_7.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_8.root",
+#"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau10/210225_135944/0000/l1t_EDM_2021Feb25_9.root"
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_1.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_3.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_4.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_5.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_6.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_7.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_9.root",
+"/store/cmst3/user/gkaratha/L1Tracker_2021Feb25/HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/crab_GluGluH_ctau50/210225_135906/0000/l1t_EDM_2021Feb25_10.root"
 ]
-
+'''
 import os
 mypath="/eos/cms/store/cmst3/user/gkaratha/L1Tracker_2021Feb28/MinBias_TuneCP5_14TeV-pythia8/crab_MinimumBias/210228_224640/0000"
 for (dirpath, dirnames, filenames) in os.walk(mypath):
   for filenm in filenames:
     if "l1t_EDM_2021Feb28" in filenm:
         readFiles.append("/store/cmst3/user/gkaratha/L1Tracker_2021Feb28/MinBias_TuneCP5_14TeV-pythia8/crab_MinimumBias/210228_224640/0000/"+filenm)
-
+'''
 process.source = cms.Source ("PoolSource",
                             fileNames = cms.untracked.vstring(readFiles),
                             secondaryFileNames = cms.untracked.vstring(),
@@ -55,7 +69,7 @@ process.options = cms.untracked.PSet(
 process.load('L1Trigger.L1TJetTrackAnalyzer.L1TJetTrackAnalyzer_cff')
 process.ntuple= cms.Path(process.L1TrackNtuple)
 
-process.TFileService = cms.Service("TFileService", fileName = cms.string('L1Jets_MinBias.root'), closeFileFast = cms.untracked.bool(True))
+process.TFileService = cms.Service("TFileService", fileName = cms.string('L1Jets_ct50.root'), closeFileFast = cms.untracked.bool(True))
 
 
 process.out = cms.OutputModule( "PoolOutputModule",

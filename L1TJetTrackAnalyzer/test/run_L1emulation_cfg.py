@@ -27,16 +27,16 @@ options.register('reportEvery', 100,
     "report every N events"
 )
 
-options.register('addDisplaced', False,
+options.register('addDisplaced', True,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
     "displaced jets"
 )
 
-options.register('addPrompt', True,
+options.register('skipMCBranches', False,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
-    "adds prompt"
+    "displaced jets"
 )
 
 
@@ -88,7 +88,8 @@ process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(options.maxEv
 readFiles = cms.untracked.vstring(
 #    "/store/relval/CMSSW_11_1_0_pre2/RelValTTbar_14TeV/GEN-SIM-DIGI-RAW/PU25ns_110X_mcRun4_realistic_v2_2026D49PU200-v1/20000/F7BF4AED-51F1-9D47-B86D-6C3DDA134AB9.root"
 #  "/store/mc/Phase2HLTTDRWinter20DIGI/TT_TuneCP5_14TeV-powheg-pythia8/GEN-SIM-DIGI-RAW/NoPU_110X_mcRun4_realistic_v3-v2/40000/6AC1E53C-45CE-E74F-BEEA-649119E1DCB8.root"
- "/store/mc/Phase2HLTTDRWinter20DIGI/HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/GEN-SIM-DIGI-RAW/NoPU_110X_mcRun4_realistic_v3-v2/240000/19EF5920-9BC1-104E-A612-42EC6406EF5B.root"
+ "/store/mc/Phase2HLTTDRWinter20DIGI/TT_TuneCP5_14TeV-powheg-pythia8/GEN-SIM-DIGI-RAW/NoPU_110X_mcRun4_realistic_v3-v2/40000/D57EE883-2FEC-E642-9DB2-213785DDDAD5.root"
+#  "/store/mc/Phase2HLTTDRWinter20DIGI/MinBias_TuneCP5_14TeV-pythia8/GEN-SIM-DIGI-RAW/PU200_110X_mcRun4_realistic_v3-v3/20001/73B5BBDD-8D28-9142-AF04-3F2328436AB6.root"
 )
 secFiles = cms.untracked.vstring()
 
@@ -160,23 +161,10 @@ if DISPLACED ==	'Displaced':
    process.L1TkPrimaryVertex.L1TrackInputTag = cms.InputTag("TTTracksFromExtendedTrackletEmulation", "Level1TTTracks")
 process.pPV = cms.Path(process.L1TkPrimaryVertex)
 
+process.load('L1Trigger.L1TJetTrackAnalyzer.L1TJetTrackAnalyzer_cff')
 
-process.L1TrackNtuple = cms.EDAnalyzer('L1TJetTrackAnalyzer',
-                                       TwoLayerJetsInputTag=cms.InputTag("L1TrackJets", "L1TrackJets", "L1TrackJets"),
-                                       FastJetsInputTag = cms.InputTag("L1TrackFastJets","L1TrackFastJets"),
-                                       GenJetsInputTag = cms.InputTag("ak4GenJets", ""),
-                                       FastJetsExtInputTag=cms.InputTag("L1TrackFastJetsExtended","L1TrackFastJetsExtended"),
-                                       TwoLayerJetsExtInputTag= cms.InputTag("L1TrackJetsExtended", "L1TrackJetsExtended"),
-                                       TracksInputTag = cms.InputTag("TTTracksFromTrackletEmulation", "Level1TTTracks"),
-                                       TracksExtInputTag = cms.InputTag("TTTracksFromExtendedTrackletEmulation", "Level1TTTracks"),
-                                       GenTrackInfoInputTag = cms.InputTag("TTTrackAssociatorFromPixelDigis", "Level1TTTracks"),
-                                       GenExtTrackInfoInputTag = cms.InputTag("TTTrackAssociatorFromPixelDigisExtended", "Level1TTTracks"),
-                                       EtMissInputTag = cms.InputTag("L1TrackerEtMiss","L1TrackerEtMiss","L1TrackJets"),
-                                       HTMissInputTag = cms.InputTag("L1TrackerHTMiss","L1TrackerHTMiss","L1TrackJets"),
-                                       PVInputTag =cms.InputTag("L1TkPrimaryVertex"),
-                                       L1GenJetMatchDR = cms.double(0.3),
-                                       AddExtendedL1Jets= cms.bool(options.addDisplaced),
-                                       AddExtendedL1Tracks = cms.bool(options.addDisplaced)
+process.L1TrackNtuple= process.L1TrackNtuple.clone(
+  SkipMCBranches=cms.bool(options.skipMCBranches)
 )
 
 process.ntuple = cms.Path(process.L1TrackNtuple)

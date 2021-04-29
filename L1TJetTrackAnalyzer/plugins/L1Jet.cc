@@ -46,8 +46,9 @@ L1Jet::FillBranches (std::string Col, std::string ColTrk, NtupleContent &nt){
 
 void 
 L1Jet::AddMCBranches (std::string Col, NtupleContent &nt){
-   for(unsigned int i=0; i<Jets->size(); i++)
+   for(unsigned int i=0; i<Jets->size(); i++){
      (nt.GetBranch(Col+"_matchedToGenIdx"))->emplace_back(-99);
-     
+     (nt.GetBranch(Col+"_matchedToGenDr"))->emplace_back(99);
+   }  
    
 }

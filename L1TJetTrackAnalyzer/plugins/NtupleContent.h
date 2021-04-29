@@ -22,7 +22,8 @@ class NtupleContent{
                       TwoLayerJet_bx, TwoLayerJet_nDispTracks, 
                       TwoLayerJet_nTightDispTracks,
                       TwoLayerJet_nTightTracks, TwoLayerJet_matchedToGenIdx,
-                      TwoLayerJet_nL1Trk, TwoLayerJet_matchedToTrackingJetIdx;
+                      TwoLayerJet_nL1Trk, TwoLayerJet_matchedToTrackingJetIdx,
+                      TwoLayerJet_matchedToGenDr, TwoLayerJet_matchedToTrackingJetDr;
 
    std::vector<std::vector<int>> TwoLayerJet_L1Trk_idx;
 
@@ -30,7 +31,7 @@ class NtupleContent{
                       FastJet_bx, FastJet_nDispTracks,
                       FastJet_nTightDispTracks,
                       FastJet_nTightTracks, FastJet_matchedToGenIdx,
-                      FastJet_nL1Trk;
+                      FastJet_nL1Trk, FastJet_matchedToGenDr;
 
    std::vector<std::vector<int>> FastJet_L1Trk_idx;
 
@@ -38,8 +39,8 @@ class NtupleContent{
                       TwoLayerJetExt_bx, TwoLayerJetExt_nDispTracks,
                       TwoLayerJetExt_nTightDispTracks,
                       TwoLayerJetExt_nTightTracks, TwoLayerJetExt_matchedToGenIdx,
-                      TwoLayerJetExt_nL1Trk,TwoLayerJetExt_matchedToTrackingJetExtIdx;
-
+                      TwoLayerJetExt_nL1Trk,TwoLayerJetExt_matchedToTrackingJetExtIdx,
+                      TwoLayerJetExt_matchedToGenDr, TwoLayerJetExt_matchedToTrackingJetExtDr;
    std::vector<std::vector<int>> TwoLayerJetExt_L1Trk_idx;
 
 
@@ -47,7 +48,7 @@ class NtupleContent{
                       FastJetExt_bx, FastJetExt_nDispTracks,
                       FastJetExt_nTightDispTracks,
                       FastJetExt_nTightTracks, FastJetExt_matchedToGenIdx,
-                      FastJetExt_nL1Trk;
+                      FastJetExt_nL1Trk, FastJetExt_matchedToGenDr;
 
    std::vector<std::vector<int>> FastJetExt_L1Trk_idx;
 
@@ -56,7 +57,9 @@ class NtupleContent{
                       TrackingJet_bx, TrackingJet_nDispTracks,
                       TrackingJet_nTightDispTracks,
                       TrackingJet_nTightTracks, TrackingJet_matchedToGenIdx,
-                      TrackingJet_nL1Trk,TrackingJet_matchedToTwoLayerJetIdx;
+                      TrackingJet_nL1Trk,TrackingJet_matchedToTwoLayerJetIdx,
+                      TrackingJet_matchedToGenDr,
+                      TrackingJet_matchedToTwoLayerJetDr;
 
    std::vector<std::vector<int>> TrackingJet_L1Trk_idx;
 
@@ -64,7 +67,9 @@ class NtupleContent{
                       TrackingJetExt_bx, TrackingJetExt_nDispTracks,
                       TrackingJetExt_nTightDispTracks,TrackingJetExt_nTightTracks, 
                       TrackingJetExt_matchedToGenIdx, TrackingJetExt_nL1Trk,
-                      TrackingJetExt_matchedToTwoLayerJetExtIdx;
+                      TrackingJetExt_matchedToTwoLayerJetExtIdx,
+                      TrackingJetExt_matchedToGenDr,
+                      TrackingJetExt_matchedToTwoLayerJetExtDr;
 
    std::vector<std::vector<int>> TrackingJetExt_L1Trk_idx;
 
@@ -76,12 +81,19 @@ class NtupleContent{
                       GenJet_matchedToFastJetExtIdx,
                       GenJet_matchedToTwoLayerJetExtIdx,
                       GenJet_matchedToTrackingJetIdx,
-                      GenJet_matchedToTrackingJetExtIdx;
+                      GenJet_matchedToTrackingJetExtIdx,
+                      GenJet_matchedToFastJetDr,GenJet_matchedToTwoLayerJetDr,
+                      GenJet_matchedToFastJetExtDr,
+                      GenJet_matchedToTwoLayerJetExtDr,
+                      GenJet_matchedToTrackingJetDr,
+                      GenJet_matchedToTrackingJetExtDr;
 
    std::vector<float> GenJet_part_pt, GenJet_part_eta, GenJet_part_phi,
                       GenJet_part_mass, GenJet_part_pdgId, GenJet_part_vx,
                       GenJet_part_vy, GenJet_part_vz, GenJet_part_dr,
-                      GenJet_part_momPdgId, GenJet_part_d0;
+                      GenJet_part_momPdgId, GenJet_part_d0,
+                      GenJet_part_momPt, GenJet_part_momVx,
+                      GenJet_part_momVy, GenJet_part_momVz;
  
    std::vector<float> Track_pt, Track_eta, Track_phi, Track_nFitPars,
                        Track_x0, Track_y0, Track_z0, Track_d0, Track_chi2, 

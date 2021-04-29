@@ -11,13 +11,13 @@ config = config()
 config.section_('General')
 config.General.transferOutputs = True
 config.General.transferLogs = True
-config.General.workArea = 'L1Tracker_%s' % production_tag
+#config.General.workArea = 'L1Tracker_%s' % production_tag
 
 config.section_('Data')
 config.Data.publication = False
-config.Data.outLFNDirBase = '/store/group/cmst3/user/gkaratha/%s' % (config.General.workArea)
+#config.Data.outLFNDirBase = '/store/group/cmst3/user/gkaratha/%s' % (config.General.workArea)
 config.Data.inputDBS = 'global'
-config.Data.totalUnits= 1000
+#config.Data.totalUnits= 10
 
 config.section_('JobType')
 config.JobType.pluginName = 'Analysis'
@@ -48,9 +48,12 @@ if __name__ == '__main__':
   parser = ArgumentParser()
   parser.add_argument('-y', '--yaml', default = 'samples.yml', help = 'File with dataset descriptions')
   parser.add_argument('-f', '--filter', default='*', help = 'filter samples, POSIX regular expressions allowed')
-  parser.add_argument('-d', '--addDisplaced', default='False', help = 'filter samples, POSIX regular expressions allowed')
-  parser.add_argument('-p', '--addPrompt', default='False', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('-d', '--addDisplaced', default='True', help = 'filter samples, POSIX regular expressions allowed')
   parser.add_argument('--wantFullReco', default='False', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('--skipMCBranches', default='False', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('--codeVersion', default='', help = 'filter samples, POSIX regular expressions allowed')
+  parser.add_argument('--totalUnits', default='', help = 'filter samples, POSIX regular expressions allowed')
+
   args = parser.parse_args()
 
   with open(args.yaml) as f:
@@ -72,13 +75,22 @@ if __name__ == '__main__':
 
       config.Data.unitsPerJob = info['split']
       
+      if args.codeVersion:
+        config.General.workArea = 'L1Tracker_'+sample+"_v"+args.codeVersion+'_%s' % production_tag
+      else:
+        config.General.workArea = 'L1Tracker_'+sample+'_%s' % production_tag
+
+      config.Data.outLFNDirBase = '/store/group/cmst3/user/gkaratha/%s' % (config.General.workArea)
+      if not args.totalUnits =="":
+        config.Data.totalUnits= int(args.totalUnits) 
+ 
         
       config.JobType.pyCfgParams = [
-            'reportEvery=1000',
+            'reportEvery=10000',
             'tag=%s' % production_tag,
             'addDisplaced=%s' % args.addDisplaced,
-            'addPrompt=%s' % args.addPrompt,
-            'wantFullReco=%s' % args.wantFullReco
+            'wantFullReco=%s' % args.wantFullReco,
+            'skipMCBranches=%s' % args.skipMCBranches
         ]
         
       config.JobType.outputFiles = ['_'.join(['L1Jets', production_tag])+'.root']

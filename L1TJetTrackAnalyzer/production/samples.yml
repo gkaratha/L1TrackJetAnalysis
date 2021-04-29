@@ -20,18 +20,52 @@ samples:
   MinimumBias:
      dataset: /MinBias_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v3/GEN-SIM-DIGI-RAW
      split: 1
-  GluGluH_ctau10:
+  GluGluH250_ctau10_pu0:
      dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
-  GluGluH_ctau0:
+  GluGluH250_ctau0_pu0:
      dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
-  GluGluH_ctau50:
+  GluGluH250_ctau50_pu0:
      dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
-  GluGluH_ctau100:
-     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+  GluGluH250_ctau10_pu140:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH250_ctau0_pu140:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH250_ctau50_pu140:
+     dataset: /HiddenGluGluH_mH-250_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
      split: 1
 
+
+  GluGluH125_ctau10_pu0:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau0_pu0:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau50_pu0:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-NoPU_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau10_pu140:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-10_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau0_pu140:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-0_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v3/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau50_pu140:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-50_TuneCP5_14TeV-pythia8/Phase2HLTTDRWinter20DIGI-PU140_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau10_pu200:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-10_14TeV-pythia8_TuneCP5/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau0_pu200:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-0_14TeV-pythia8_tuneCP5/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
+  GluGluH125_ctau50_pu200:
+     dataset: /HiddenGluGluH_mH-125_Phi-60_ctau-50_14TeV-pythia8_TuneCP5/Phase2HLTTDRWinter20DIGI-PU200_110X_mcRun4_realistic_v3-v2/GEN-SIM-DIGI-RAW
+     split: 1
 
 

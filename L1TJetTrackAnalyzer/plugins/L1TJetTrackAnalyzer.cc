@@ -85,6 +85,7 @@ class L1TJetTrackAnalyzer: public edm::one::EDAnalyzer<edm::one::SharedResources
     double L1GenJetMatchDR_=0.3;
     bool AddExtendedL1Jets_=true;
     bool AddExtendedL1Tracks_=true;
+    bool SkipMCBranches_=false;
     edm::Service<TFileService> fs;
     TTree * t1;
     NtupleContent nt;
@@ -92,7 +93,7 @@ class L1TJetTrackAnalyzer: public edm::one::EDAnalyzer<edm::one::SharedResources
 
 //constructor
 L1TJetTrackAnalyzer::L1TJetTrackAnalyzer(const edm::ParameterSet& iConfig):
-    BeamSpotToken_{ consumes<reco::BeamSpot> (iConfig.getParameter<edm::InputTag>("BeamSpotInpuTag")) },
+    BeamSpotToken_{ consumes<reco::BeamSpot> (iConfig.getParameter<edm::InputTag>("BeamSpotInputTag")) },
     FastJetsToken_{ consumes<std::vector<l1t::TkJet>>( iConfig.getParameter <edm::InputTag> ("FastJetsInputTag") ) },
     TwoLayerJetsToken_{ consumes<std::vector<l1t::TkJet>>( iConfig.getParameter <edm::InputTag> ("TwoLayerJetsInputTag") )},
     GenJetsToken_{ consumes<std::vector<reco::GenJet>>( iConfig.getParameter <edm::InputTag> ("GenJetsInputTag") ) },
@@ -110,7 +111,8 @@ L1TJetTrackAnalyzer::L1TJetTrackAnalyzer(const edm::ParameterSet& iConfig):
     GenPartToken_{ consumes< std::vector<reco::GenParticle> > (iConfig.getParameter<edm::InputTag> ("GenPartInputTag")) },
     L1GenJetMatchDR_{iConfig.getParameter<double>("L1GenJetMatchDR")},
     AddExtendedL1Jets_{iConfig.getParameter<bool>("AddExtendedL1Jets")},
-    AddExtendedL1Tracks_{iConfig.getParameter<bool>("AddExtendedL1Tracks")}
+    AddExtendedL1Tracks_{iConfig.getParameter<bool>("AddExtendedL1Tracks")},
+    SkipMCBranches_{iConfig.getParameter<bool>("SkipMCBranches")}
 {}
 
 L1TJetTrackAnalyzer::~L1TJetTrackAnalyzer(){};
@@ -175,7 +177,7 @@ L1TJetTrackAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
     FastJetsExt.FillBranches("FastJetExt","TrackExt",nt);
   }  
 
-  if ( !iEvent.isRealData() ){
+  if ( !iEvent.isRealData() && !SkipMCBranches_ ){
     TrackingJets.ReadData(TrackingJetsToken_,iEvent);
     TrackingJets.FillBranches("TrackingJet","Track",nt);
     TwoLayerJets.AddMCBranches("TwoLayerJet",nt);
