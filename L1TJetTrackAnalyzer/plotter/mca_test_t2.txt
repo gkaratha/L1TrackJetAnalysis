@@ -1,0 +1,2 @@
+ct=5:/afs/cern.ch/user/g/gkaratha/public/GTTntuple/L1Jets_ctau50.root
+ct=0:/afs/cern.ch/user/g/gkaratha/public/GTTntuple/L1Jets_ctau0.root

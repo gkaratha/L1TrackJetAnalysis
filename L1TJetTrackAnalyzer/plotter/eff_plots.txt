@@ -1,0 +1,7 @@
+#:htrkjExt:GenJet_muonE+GenJet_chargedEmE+GenJet_chargedHadronE:fabs(GenJet_eta)<2.4 && sqrt(GenJet_part_dr)<0.1:GenJet_matchedToTrackingJetExtIdx>-1:Charged E:100:0:300:cpt_trkj:LegName=Extended:LegPos=BR:YTitle=Efficiency
+#:htrkj:GenJet_muonE+GenJet_chargedEmE+GenJet_chargedHadronE:fabs(GenJet_eta)<2.4 && sqrt(GenJet_part_dr)<0.1:GenJet_matchedToTrackingJetIdx>-1:Charged E:100:0:300:cpt_trkj:LegName=Hybrid:YTitle=Efficiency
+
+hpt2ljext:TrackingJetExt_pt:fabs(TrackingJetExt_eta)<2.4 && TrackingJetExt_matchedToGenIdx>-1:TrackingJetExt_matchedToTwoLayerJetExtIdx>-1:p_{T} (trking jet):50:0:150:cpt_2lext:YTitle=Efficiency:LegPos=BR:YMinMax=0=1.1
+heta2ljext:TrackingJetExt_eta:TrackingJetExt_matchedToGenIdx>-1:TrackingJetExt_matchedToTwoLayerJetExtIdx>-1:#eta (trking jet):48:-2.4:2.4:ceta_2lext:YTitle=Efficiency:LegPos=BR:YMinMax=0=1.1
+hpt2ljextbin1:TrackingJetExt_pt:fabs(TrackingJetExt_eta)<1.2 && TrackingJetExt_matchedToGenIdx>-1:TrackingJetExt_matchedToTwoLayerJetExtIdx>-1:p_{T} (trking jet):50:0:150:cpt_2lext_bin1:YTitle=Efficiency:LegPos=BR:YMinMax=0=1.1
+hpt2ljextbin2:TrackingJetExt_pt:fabs(TrackingJetExt_eta)>1.2 && fabs(TrackingJetExt_eta)<2.4 && TrackingJetExt_matchedToGenIdx>-1:TrackingJetExt_matchedToTwoLayerJetExtIdx>-1:p_{T} (trking jet):50:0:150:cpt_2lext_bin2:LegPos=BR:YTitle=Efficiency:YMinMax=0=1.1
