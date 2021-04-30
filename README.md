@@ -7,13 +7,13 @@
   - Ntuplizer: https://indico.cern.ch/event/1009246/contributions/4235306/attachments/2193499/3707865/L1TrkJetFW.pdf
   - Plotting: https://indico.cern.ch/event/1012970/contributions/4282920/attachments/2212159/3744126/L1TrkJetFW2.pdf 
 <hr>
->
-Updates :
- * Added more variables
+
+**Updates :
+ * More variables
  * Added tracking jets
  * Small bug fixes
- * Cosmetics for plots
->
+ * Cosmetics for plots**
+
 <hr>
 
 # Instructions for installation
