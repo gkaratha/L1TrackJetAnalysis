@@ -7,15 +7,13 @@
   - Ntuplizer: https://indico.cern.ch/event/1009246/contributions/4235306/attachments/2193499/3707865/L1TrkJetFW.pdf
   - Plotting: https://indico.cern.ch/event/1012970/contributions/4282920/attachments/2212159/3744126/L1TrkJetFW2.pdf 
 <hr>
-Updates:
 >
-* Added more variables
+Updates :
+ * Added more variables
+ * Added tracking jets
+ * Small bug fixes
+ * Cosmetics for plots
 >
-* Added tracking jets
->
-* Small bug fixes
->
-* Cosmetics for plots
 <hr>
 
 # Instructions for installation
@@ -42,7 +40,7 @@ Updates:
 
 # Plotting Tool
  Takes as input any ROOT file with a TTree and produces the final plots. It takes minimum two files for input the samples file and the plot file, both of which are simple txt files. The command to run it is: 
-  >      _python plotter.py -i <samples> -p <plots> -o <output>_
+  >      python plotter.py -i <samples> -p <plots> -o <output>
 
 * Availiable Flags:
     - -f if the output folder exists already, this will overwrite it. Otherwise the code will just add a Number at the end, showing the version
